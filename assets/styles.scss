@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-/*========== Colors ==========*/
+/*========== Colors and fonts ==========*/
 $primary-color: #27374D;
 $text-color-wh: #ffffff;
+$navbar-color: #27374D;
+$color_1: crimson;
+$font-family_1: 'Poppins', sans-serif;
+$font-family_2: 'Ubuntu', sans-serif;
+$color_3: #fff;
+$color_4: crimson;
 
 
 /*==================== BASE ====================*/
@@ -13,7 +19,88 @@ $text-color-wh: #ffffff;
     text-decoration: none;
 
   }
-
+  
+  /* all similar content styling codes */
+  section {
+    padding: 100px 0;
+    .title {
+      position: relative;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 500;
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      font-family: $font-family_2;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 180px;
+        height: 3px;
+        background: #111;
+        transform: translateX(-50%);
+      }
+      &::after {
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        font-size: 20px;
+        color: $color_1;
+        padding: 0 5px;
+        background: #fff;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .container {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+  }
+  .about {
+    font-family: $font-family_1;
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .services {
+    font-family: $font-family_1;
+    .serv-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .skills {
+    font-family: $font-family_1;
+    .skills-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .teams {
+    font-family: $font-family_1;
+  }
+  .contact {
+    font-family: $font-family_1;
+    .contact-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  footer {
+    font-family: $font-family_1;
+  }
+  
 
 /*==================== NAV ====================*/
 .container {
@@ -27,7 +114,7 @@ $text-color-wh: #ffffff;
     padding: 30px 0;
     font-family: sans-serif;
     transition: all 0.3s ease;
-    background-color: #27374D;
+    background-color: #27374d;
     z-index: 999;
     
     .container {
@@ -118,15 +205,18 @@ $text-color-wh: #ffffff;
 }
 /*=============== menu btn style ===============*/
 .menu-btn {
-  display: inline-block;
-  cursor: pointer;
   display: none;
   .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: #fff;
     margin: 6px 0;
     transition: 0.4s;
+    display: inline-block;
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
   }
 }
 .change {
@@ -222,11 +312,201 @@ $text-color-wh: #ffffff;
   }
 }
 
+/*-==================== SERVİCES ====================*/
+
+.services {
+	color: $color_3;
+	background: #111;
+	.title {
+		&::before {
+			background: #fff;
+		}
+		&::after {
+			background: #111;
+			content: "what i provide";
+		}
+	}
+	.serv-content {
+		.card {
+			width: calc(33% - 20px);
+			background: #222;
+			text-align: center;
+			border-radius: 6px;
+			padding: 50px 25px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			&:hover {
+				background: crimson;
+				.box {
+					transform: scale(1.05);
+				}
+				i {
+					color: $color_3;
+				}
+			}
+			.box {
+				transition: all 0.3s ease;
+			}
+			i {
+				font-size: 50px;
+				color: $color_4;
+				transition: color 0.3s ease;
+			}
+			.text {
+				font-size: 25px;
+				font-weight: 500;
+				margin: 10px 0 7px 0;
+			}
+		}
+	}
+}
+
+
+/*-==================== SERVİCES ====================*/
+$color_1: #fff;
+$color_2: crimson;
+
+.skills {
+	.title {
+		&::after {
+			content: "what i know";
+		}
+	}
+	.skills-content {
+		.column {
+			width: calc(50% - 30px);
+		}
+		.left {
+			.text {
+				font-size: 20px;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+			p {
+				text-align: justify;
+			}
+			a {
+				display: inline-block;
+				background: crimson;
+				color: $color_1;
+				font-size: 18px;
+				font-weight: 500;
+				padding: 8px 16px;
+				margin-top: 20px;
+				border-radius: 6px;
+				border: 2px solid crimson;
+				transition: all 0.3s ease;
+				&:hover {
+					color: $color_2;
+					background: none;
+				}
+			}
+		}
+		.right {
+			.bars {
+				margin-bottom: 15px;
+			}
+			.info {
+				display: flex;
+				margin-bottom: 5px;
+				align-items: center;
+				justify-content: space-between;
+			}
+			span {
+				font-weight: 500;
+				font-size: 18px;
+			}
+			.line {
+				height: 5px;
+				width: 100%;
+				background: lightgrey;
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					height: 100%;
+					left: 0;
+					top: 0;
+					background: crimson;
+				}
+			}
+		}
+	}
+}
+.skills-content {
+	.right {
+		.html {
+			&::before {
+				width: 90%;
+			}
+		}
+		.css {
+			&::before {
+				width: 60%;
+			}
+		}
+		.js {
+			&::before {
+				width: 80%;
+			}
+		}
+		.php {
+			&::before {
+				width: 50%;
+			}
+		}
+		.mysql {
+			&::before {
+				width: 70%;
+			}
+		}
+	}
+}
+
+/*==================== FOOTER ====================*/
+
+footer {
+  background-color: #27374D;
+  #fb-icon {
+    padding-right: 15px;
+  }
+  .btn {
+    border: none;
+  }
+}
+
+
   /*=============== responsive media query ===============*/
   /* For small devices */
 @media (max-width: 991px) {
     .container {
       padding: 0 50px;
+    }
+    .navbar {
+      .menu {
+        position: fixed;
+        height: 10vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: $navbar-color;
+        text-align: center;
+        padding-top: 80px;
+        li {
+          display: block;
+          a {
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .menu-btn {
+      .bar1, .bar2, .bar3 {
+        display: block;
+        z-index: 999;
+      }
     }
 }
   
@@ -238,27 +518,6 @@ $text-color-wh: #ffffff;
 
 
 /* Change background header */
-
-
-/*==================== HOME ====================*/
-
-
-/*==================== BUTTONS ====================*/
-
-
-
-
-
-/*==================== SKILLS ====================*/
-
-
-/*==================== QUALIFICATION ====================*/
-
-
-/*==================== SERVICES ====================*/
-
-
-/* Active Modal */
 
 
 /*==================== PORTFOLIO ====================*/
@@ -273,17 +532,7 @@ $text-color-wh: #ffffff;
 /*==================== CONTACT ME ====================*/
 
 
-/*==================== FOOTER ====================*/
 
-footer {
-  background-color: #27374D;
-  #fb-icon {
-    padding-right: 15px;
-  }
-  .btn {
-    border: none;
-  }
-}
 
 /*========== SCROLL UP ==========*/
 
