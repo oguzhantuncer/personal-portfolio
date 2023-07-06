@@ -253,6 +253,7 @@ $color_4: crimson;
       height: 4px;
       background: #111;
       transform: translateX(-50%);
+      margin-bottom: 60px;
     }
     &:after{
       content: "who i am";
@@ -264,6 +265,7 @@ $color_4: crimson;
       padding: 5px;
       background: #fff;
       transform: translateX(-50%);
+      margin-bottom: 60px;
     }
   }
   .about-content {
@@ -316,20 +318,20 @@ $color_4: crimson;
 
 .services {
 	color: $color_3;
-	background: #111;
+	background: #27374D;
 	.title {
 		&::before {
 			background: #fff;
 		}
 		&::after {
-			background: #111;
+			background: #27374D;
 			content: "what i provide";
 		}
 	}
 	.serv-content {
 		.card {
 			width: calc(33% - 20px);
-			background: #222;
+			background: rgba(0, 0, 0, 0.2);
 			text-align: center;
 			border-radius: 6px;
 			padding: 50px 25px;
@@ -362,7 +364,7 @@ $color_4: crimson;
 }
 
 
-/*-==================== SERVİCES ====================*/
+/*-==================== SKİLLS ====================*/
 $color_1: #fff;
 $color_2: crimson;
 
