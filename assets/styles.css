@@ -158,7 +158,7 @@ footer {
 .home {
   display: flex;
   height: 100vh;
-  background-image: url("/assets/images/home.jpg");
+  background-image: url("/assets/images/home.JPG");
   background-size: cover;
   background-attachment: fixed;
   color: #861414;
